@@ -9,5 +9,6 @@ NGLAMPv1 flight and first data products |
 
 MiniPRISM internals		| MiniPRISM dispersed contamination measurement
 :-----------------:|:--------------------------------------------:
-![MiniPRISMv1](images/minip.png)|![MiniPRISMv1 Fukushima](images/minip_fuku.png)
-![MiniPRISMv1 in flight](images/minip_flight.png) |
+![MiniPRISMv1](images/minip.png)
+This image shows the 64 detector semiconductor detector array that MiniPRISM which composes MiniPRISM. The detectors are semiconductor single crystal volumes that are 1cm x 1cm x 1cm. |![MiniPRISMv1 Fukushima](images/minip_fuku.png)
+The above is a data collection in Fukushima Prefecture, Japan which shows a data product from a newly constructed parking-lot and adjoining forested area. 
