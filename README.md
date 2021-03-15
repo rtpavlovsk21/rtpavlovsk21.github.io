@@ -14,5 +14,6 @@ MiniPRISM internals		| MiniPRISM dispersed contamination measurement
 
 RadWatch Real-Time Air Monitor |
 :------------------------------:
-![Air Monitor](images/airmonitor.png)|
+![Air Monitor](images/airmonitor.png) ![Surfers Beach](images/surfers_beach.png)|
 Radioactivity in the air from Naturally Occurring Radioactive Materials (NORM) is found to have large weather variance due to a few factors: air current directionality, precipitation and humidity. In Berkeley for example, air from mainland sources tends to accrue more radon products than winds from the sea. Additionally rain washes out radon through charge neutralization and physical means. The above image is a time-series plot of radioactivity from specific isotopes in a planar high-purity germanium detector that I helped put online. ![RadWatch](radwatch.berkeley.edu) continues to educate and teach about natural sources of radioactivity and improve accessibility to high quality people from the University of California Berkeley. |
+
