@@ -5,4 +5,6 @@ I am a radiation detection scientist and engineer. I generally focus on hardware
 ## Previous work
 ![NGLAMPv1](images/nglamp_pdf.png)
 
-![MiniPRISMv1](images/minip.png) ![MiniPRISMv1 Fukushima](images/minip_fuku.png)
+MiniPRISM internals		| MiniPRISM dispersed contamination measurement
+:------------------------------:|:--------------------------------------------:
+![MiniPRISMv1](images/minip.png)|![MiniPRISMv1 Fukushima](images/minip_fuku.png)
