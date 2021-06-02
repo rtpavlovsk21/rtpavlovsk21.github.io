@@ -4,6 +4,10 @@ I am a radiation detection scientist and engineer. I generally focus on hardware
 
 ## Previous work
 
+My experience generally focuses around high performance radiation detection systems. These systems need to have specificity, sensitivity and directionality as fundamental inputs to the radiation detection problem. 
+
+Specifically my work has focused on creating, designing and building unique radiation detector instruments for 3D radiation mapping in real-time. These systems present unique challenges in all areas of mechanical, electrical and scientific investigation. 
+
 NGLAMPv1 flight and first data products |
 :--------------------------------------:|
 ![NGLAMPv1](images/nglamp_pdf.png) |
