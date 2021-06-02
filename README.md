@@ -5,8 +5,8 @@ I am a radiation detection scientist and engineer. I generally focus on hardware
 ## Previous work
 NGLAMPv1 flight and first data products |
 :--------------------------------------:|
-![NGLAMPv1](images/nglamp_pdf.png) 
-The photo demonstrates the ability of NGLAMP to fly on a small unmanned aerial system (sUAS) and perform simultaneous neutron and gamma-ray mapping. This demonstration shows a sheilded neutron source, concealed in its gamma-ray signature by heavy sheilding. Therefore the expected and observed result is a neutron-based localization with a uniform gamma-ray background. Read the seminal, ![Arxiv](https://export.arxiv.org/abs/1908.06114) paper on this system. Additional context is provided in the LAMP ![Arxiv](https://export.arxiv.org/abs/1901.05038) paper.
+![NGLAMPv1](images/nglamp_pdf.png) |
+The photo demonstrates the ability of NGLAMP to fly on a small unmanned aerial system (sUAS) and perform simultaneous neutron and gamma-ray mapping. This demonstration shows a sheilded neutron source, concealed in its gamma-ray signature by heavy sheilding. Therefore the expected and observed result is a neutron-based localization with a uniform gamma-ray background. Read the seminal, ![Arxiv](https://export.arxiv.org/abs/1908.06114) paper on this system. Additional context is provided in the LAMP ![Arxiv](https://export.arxiv.org/abs/1901.05038) paper. |
 
 MiniPRISM internals		| MiniPRISM dispersed contamination measurement
 :-----------------:|:--------------------------------------------:
