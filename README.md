@@ -3,9 +3,10 @@
 I am a radiation detection scientist and engineer. I generally focus on hardware improvements for multichannel radiation detector systems, however I try to work on difficult problems that have large impact.
 
 ## Previous work
-NGLAMPv1 flight and first data products
+NGLAMPv1 flight and first data products |
 :--------------------------------------:
-![NGLAMPv1](images/nglamp_pdf.png) The photo demonstrates the ability of NGLAMP to fly on a small unmanned aerial system (sUAS) and perform simultaneous neutron and gamma-ray mapping. This demonstration shows a sheilded neutron source, concealed in its gamma-ray signature by heavy sheilding. Therefore the expected and observed result is a neutron-based localization with a uniform gamma-ray background. Read the seminal, ![Arxiv](https://export.arxiv.org/abs/1908.06114) paper on this system. Additional context is provided in the LAMP ![Arxiv](https://export.arxiv.org/abs/1901.05038) paper.
+![NGLAMPv1](images/nglamp_pdf.png) 
+The photo demonstrates the ability of NGLAMP to fly on a small unmanned aerial system (sUAS) and perform simultaneous neutron and gamma-ray mapping. This demonstration shows a sheilded neutron source, concealed in its gamma-ray signature by heavy sheilding. Therefore the expected and observed result is a neutron-based localization with a uniform gamma-ray background. Read the seminal, ![Arxiv](https://export.arxiv.org/abs/1908.06114) paper on this system. Additional context is provided in the LAMP ![Arxiv](https://export.arxiv.org/abs/1901.05038) paper.
 
 MiniPRISM internals		| MiniPRISM dispersed contamination measurement
 :-----------------:|:--------------------------------------------:
@@ -15,4 +16,4 @@ RadWatch Measurements and Outreach|
 :------------------------------:
 ![Air Monitor](images/airmonitor.png) |
 Radioactivity in the air from Naturally Occurring Radioactive Materials (NORM) is found to have large weather variance due to a few factors: air current directionality, precipitation and humidity. In Berkeley for example, air from mainland sources tends to accrue more radon products than winds from the sea. Additionally rain washes out radon through charge neutralization and physical means. The above image is a time-series plot of radioactivity from specific isotopes in a planar high-purity germanium detector that I helped put online. ![RadWatch](radwatch.berkeley.edu) continues to educate and teach about natural sources of radioactivity and improve accessibility to high quality people from the University of California Berkeley. |
-![Surfers Beach](images/surfers_beach.png)|
+![Surfers Beach](images/surfers_beach.png) |
