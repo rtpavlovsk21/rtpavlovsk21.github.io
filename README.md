@@ -1,7 +1,7 @@
 # rtpavlovsk21.github.io
 ## Who I am
 
-![Ryan Pavlovsky](images/ryanpavlovsky.jpg) | I am a radiation detection scientist and engineer. I generally focus on hardware improvements for multichannel radiation detector systems, however I try to work on difficult problems that have large impact.
+![Ryan Pavlovsky](images/ryanpavlovsky.jpg =250x250) | I am a radiation detection scientist and engineer. I generally focus on hardware improvements for multichannel radiation detector systems, however I try to work on difficult problems that have large impact.
 
 ## Previous work
 
