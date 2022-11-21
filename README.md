@@ -28,8 +28,8 @@ Radioactivity in the air from Naturally Occurring Radioactive Materials (NORM) i
 ![Surfers Beach](images/surfers_beach.png) |
 
 ## Non-work pieces
-![](images/stone.jpeg)
-![](images/colorized.jpeg)
+![Play](images/stone.jpeg)
+![Color](images/colorized.jpeg)
 
 <a rel="me" href="https://sfba.social/@rp">Mastodon</a>
 
