@@ -10,7 +10,7 @@ I am currently the Head of Hardware at [Gamma Reality Inc](https://gammareality.
 
 My experience generally focuses around high performance radiation detection systems. These systems need to have specificity, sensitivity and directionality as fundamental inputs to the radiation detection problem. 
 
-Specifically my work has focused on creating, designing and building unique radiation detector instruments for 3D radiation mapping in real-time. These systems present unique challenges in all areas of mechanical, electrical and scientific investigation. 
+Specifically my work has focused on creating, designing and building unique radiation detector instruments for 3D radiation mapping in real-time. These systems present unique challenges in all areas of mechanical, electrical and scientific investigation.
 
 NGLAMPv1 flight and first data products |
 :--------------------------------------:|
@@ -26,6 +26,10 @@ RadWatch Measurements and Outreach |
 ![Air Monitor](images/airmonitor.png) |
 Radioactivity in the air from Naturally Occurring Radioactive Materials (NORM) is found to have large weather variance due to a few factors: air current directionality, precipitation and humidity. In Berkeley for example, air from mainland sources tends to accrue more radon products than winds from the sea. Additionally rain washes out radon through charge neutralization and physical means. The above image is a time-series plot of radioactivity from specific isotopes in a planar high-purity germanium detector that I helped put online. ![RadWatch](radwatch.berkeley.edu) continues to educate and teach about natural sources of radioactivity and improve accessibility to high quality people from the University of California Berkeley. |
 ![Surfers Beach](images/surfers_beach.png) |
+
+## Github Public PRs of Note
+1. [PR to make Numpy / h5py comparisons commutative in __eq__ and __neq__](https://github.com/h5py/h5py/pull/1954)
+1. [USB-C Cable Tester Documentation Improvements](https://github.com/alvarop/usb_c_cable_tester/pull/1)
 
 ## Non-work pieces
 ![Play](images/stone.jpeg)
