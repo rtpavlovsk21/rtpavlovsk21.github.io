@@ -12,63 +12,62 @@
     <div id="plotly-div"></div>
 
     <script>
-        // Helper function to convert millisecond epoch to ISO string
-        function epochToISO(epochMillis) {
-            return new Date(epochMillis).toISOString();
-        }
+       // Helper function to convert millisecond epoch to ISO string
+function epochToISO(epochMillis) {
+    return new Date(epochMillis).toISOString(); 
+}
 
-        // Sample data
-        var datasets = [
-            {
-                x: [1672531199000, 1672617599000, 1672703999000], // millisecond epoch times
-                y: [2, 5, 3],
-                name: 'Series 1',
-                yAxis: 'y'
-            },
-            {
-                x: [1672531199000, 1672617599000, 1672703999000], // millisecond epoch times
-                y: [300, 100, 700],
-                name: 'Series 2',
-                yAxis: 'y2'
-            }
-        ];
-
-        // Create traces from datasets
-        var traces = datasets.map(function (data, index) {
-            return {
-                type: "scatter",
-                mode: "lines",
-                name: data.name,
-                x: data.x.map(epochToISO), // convert each epoch timestamp to ISO string
-                y: data.y,
-                yaxis: data.yAxis,
-                line: {
-                    color: index === 0 ? '#17BECF' : '#7F7F7F'
-                }
-            };
-        });
-
-        // Basic layout configuration
-        var layout = {
-            title: 'Multiple Time Series with Twinx in Plotly',
+// Fetch the JSON data and plot
+fetch('./data_points.json')
+    .then(response => response.json())
+    .then(data => {
+        let traces = [];
+        let layout = {
+            title: 'Multiple Time Series with Individual Axes in Plotly',
             xaxis: {
                 autorange: true
             }
         };
 
-        // Add y-axes to layout based on datasets
-        datasets.forEach(function (data, index) {
-            layout[data.yAxis] = {
-                autorange: true,
-                side: index === 0 ? 'left' : 'right',
-                overlaying: index === 0 ? undefined : 'y'
-            };
+        // Extracting epoch times and converting to ISO format
+        let xValues = data["epoch_times"].map(epochToISO);
+        
+        // Iterate over all keys in the JSON data (excluding "epoch_times")
+        Object.keys(data).forEach((key, index) => {
+            if (key !== "epoch_times") {
+                let yAxisName = 'y' + (index + 1);
+                let side = index === 0 ? 'left' : 'right';
+
+                // Create trace for the data series
+                traces.push({
+                    type: "scatter",
+                    mode: "lines",
+                    name: key,
+                    x: xValues,
+                    y: data[key].map(Number), // Convert string values to numbers
+                    yaxis: yAxisName,
+                    line: {color: index === 0 ? '#17BECF' : '#7F7F7F'}
+                });
+
+                // Create Y-axis for the data series
+                layout[yAxisName] = {
+                    autorange: true,
+                    side: side,
+                    overlaying: index === 0 ? undefined : 'y',
+                    title: key
+                };
+
+                // Offset subsequent y-axes to avoid overlap
+                if (index > 0) {
+                    layout[yAxisName].anchor = 'free';
+                    layout[yAxisName].position = 1 - 0.15 * index;
+                }
+            }
         });
 
         // Plot the data
         Plotly.newPlot('plotly-div', traces, layout);
-
-
+    });
     </script>
 </body>
 
