@@ -17,7 +17,6 @@
     <div id="plot_#data_point_6_value"></div>
 
     <script>
-        // JavaScript code will be inserted here
         // Helper function to convert millisecond epoch to ISO string
         function epochToISO(epochMillis) {
             return new Date(epochMillis).toISOString();
@@ -65,8 +64,32 @@
                     // Plot the data in its respective div container
                     let containerId = "plot_" + key;
                     Plotly.newPlot(containerId, [trace], layout);
+
+                    // Event listener to sync zooming
+                    document.getElementById(containerId).on('plotly_relayout', function (eventData) {
+                        syncZooming(eventData, dataPoints, key);
+                    });
                 });
             });
+
+        // Sync the x-axis zooming across all plots
+        function syncZooming(eventData, dataPoints, currentKey) {
+            if (eventData['xaxis.range[0]'] && eventData['xaxis.range[1]']) {
+                let updatedRange = [
+                    eventData['xaxis.range[0]'],
+                    eventData['xaxis.range[1]']
+                ];
+
+                dataPoints.forEach((key) => {
+                    if (key !== currentKey) { // Don't update the plot that triggered the zooming
+                        Plotly.relayout('plot_' + key, {
+                            'xaxis.range': updatedRange
+                        });
+                    }
+                });
+            }
+        }
+
 
     </script>
 </body>
