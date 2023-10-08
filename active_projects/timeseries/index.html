@@ -4,70 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Time Series Plot</title>
+    <title>Separate Time Series Plots</title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 
 <body>
-    <div id="plotly-div"></div>
+    <div id="plot_data_point_1_value"></div>
+    <div id="plot_data_point_2_value"></div>
+    <div id="plot_data_point_3_value"></div>
+    <div id="plot_data_point_4_value"></div>
+    <div id="plot_data_point_5_value"></div>
+    <div id="plot_data_point_6_value"></div>
 
     <script>
-       // Helper function to convert millisecond epoch to ISO string
-function epochToISO(epochMillis) {
-    return new Date(epochMillis).toISOString(); 
-}
+        // JavaScript code will be inserted here
+        // Helper function to convert millisecond epoch to ISO string
+        function epochToISO(epochMillis) {
+            return new Date(epochMillis).toISOString();
+        }
 
-// Fetch the JSON data and plot
-fetch('./data_points.json')
-    .then(response => response.json())
-    .then(data => {
-        let traces = [];
-        let layout = {
-            title: 'Multiple Time Series with Individual Axes in Plotly',
-            xaxis: {
-                autorange: true
-            }
-        };
+        // Fetch the JSON data and plot
+        fetch('./data.json')
+            .then(response => response.json())
+            .then(data => {
 
-        // Extracting epoch times and converting to ISO format
-        let xValues = data["epoch_times"].map(epochToISO);
-        
-        // Iterate over all keys in the JSON data (excluding "epoch_times")
-        Object.keys(data).forEach((key, index) => {
-            if (key !== "epoch_times") {
-                let yAxisName = 'y' + (index + 1);
-                let side = index === 0 ? 'left' : 'right';
+                // Extracting epoch times and converting to ISO format
+                let xValues = data["epoch_times"].map(epochToISO);
 
-                // Create trace for the data series
-                traces.push({
-                    type: "scatter",
-                    mode: "lines",
-                    name: key,
-                    x: xValues,
-                    y: data[key].map(Number), // Convert string values to numbers
-                    yaxis: yAxisName,
-                    line: {color: index === 0 ? '#17BECF' : '#7F7F7F'}
+                // List of data points to plot
+                const dataPoints = [
+                    "data_point_1_value",
+                    "data_point_2_value",
+                    "data_point_3_value",
+                    "data_point_4_value",
+                    "data_point_5_value",
+                    "data_point_6_value"
+                ];
+
+                // Iterate over the specified data points
+                dataPoints.forEach((key) => {
+                    let trace = {
+                        type: "scatter",
+                        mode: "lines",
+                        name: key,
+                        x: xValues,
+                        y: data[key].map(Number), // Convert string values to numbers
+                        line: { color: '#17BECF' }
+                    };
+
+                    let layout = {
+                        title: key,
+                        xaxis: {
+                            autorange: true
+                        },
+                        yaxis: {
+                            autorange: true
+                        }
+                    };
+
+                    // Plot the data in its respective div container
+                    let containerId = "plot_" + key;
+                    Plotly.newPlot(containerId, [trace], layout);
                 });
+            });
 
-                // Create Y-axis for the data series
-                layout[yAxisName] = {
-                    autorange: true,
-                    side: side,
-                    overlaying: index === 0 ? undefined : 'y',
-                    title: key
-                };
-
-                // Offset subsequent y-axes to avoid overlap
-                if (index > 0) {
-                    layout[yAxisName].anchor = 'free';
-                    layout[yAxisName].position = 1 - 0.15 * index;
-                }
-            }
-        });
-
-        // Plot the data
-        Plotly.newPlot('plotly-div', traces, layout);
-    });
     </script>
 </body>
 
