@@ -30,7 +30,7 @@ Radioactivity in the air from Naturally Occurring Radioactive Materials (NORM) i
 ## Github Public PRs of Note
 1. [PR to make Numpy / h5py comparisons commutative in __eq__ and __neq__](https://github.com/h5py/h5py/pull/1954)
 1. [USB-C Cable Tester Documentation Improvements](https://github.com/alvarop/usb_c_cable_tester/pull/1)
-1. [PR to improve parsing in skidl of Kicad7 libraries] (https://github.com/devbisme/skidl/pull/195)
+1. [PR to improve parsing in skidl of Kicad7 libraries](https://github.com/devbisme/skidl/pull/195)
 
 ## Non-work pieces
 ![Play](images/stone.jpeg)
